@@ -1,0 +1,134 @@
+:root{
+  --bright-orange:hsl(31, 77%, 52%);
+  --dark-cyan:hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  --main-color-text: hsl(0, 0%, 100%);
+  --icon-background:hsl(0deg 0% 33% / 53%);
+  --default-button-color: hsl(0, 0%, 100%);
+}
+*{
+  margin:0;
+  padding:0;
+  font-family: 'Lexend Deca', sans-serif;
+}
+
+.container{
+  position:absolute;
+  border-radius: 10px;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  display: flex;
+  flex-direction: row;
+  color:var(--main-color-text);
+}
+.icon{
+  content:'';
+  width:40px;
+  height:40px;
+  background-color: var(--icon-background);
+  border-radius: 50%;
+  margin-bottom:25px;
+}
+.cards{
+  padding:30px;
+  display: flex;
+  flex-direction: column;
+}
+.info{
+  height:240px;
+  line-height: 24px;
+  box-sizing: content-box;
+}
+.button{
+  bottom:20px;
+}
+.button button{
+  padding:1rem 1.5rem;
+  border-radius:1.5rem;
+  outline:none;
+  border:none;
+  font-weight: 700;
+}
+.sedans{
+  background-color: var(--bright-orange);
+  border-bottom-left-radius: 10px;
+  border-top-left-radius:10px;
+  box-sizing: content-box;
+}
+.sedans button{
+  color:var(--bright-orange);
+  background-color:var(--default-button-color);
+  border:1px solid  var( --default-button-color);
+}
+.sedans button:hover{
+  background-color:  var( --bright-orange);
+  border:1px solid  var( --default-button-color);
+  color: var( --main-color-text);
+  cursor: pointer;
+}
+.suvs{
+  background-color: var(--dark-cyan);
+}
+.suvs button{
+  color: var(--dark-cyan);
+  background-color:var(--default-button-color);
+  border:1px solid  var( --default-button-color);
+}
+.suvs button:hover{
+  background-color:  var( --dark-cyan);
+  border:1px solid  var( --default-button-color);
+  color: var( --main-color-text);
+  cursor: pointer;
+}
+.luxury{
+  background-color: var( --very-dark-cyan);
+  border-bottom-right-radius: 10px;
+  border-top-right-radius: 10px;
+  box-sizing: content-box;
+  border:1px solid  var( --very-dark-cyan);
+}
+.luxury button{
+  color: var( --very-dark-cyan);
+  background-color:var(--default-button-color);
+  border:1px solid  var( --default-button-color);
+}
+.luxury button:hover{
+  background-color:  var( --very-dark-cyan);
+  border:1px solid  var( --default-button-color);
+  color: var( --main-color-text);
+  cursor: pointer;
+}
+.cards h1{
+  font-family: 'Big Shoulders Display', cursive;
+  font-weight: 700;
+  margin-bottom:1.7rem;
+}
+
+@media (max-width:375px){
+  .container{
+    flex-direction: column;
+    position:absolute;
+    top: 15%;
+    left: 8%;
+    transform: translate(-3%, -5%);
+    margin-bottom:2rem;
+  }
+  .cards{
+    width:80%;
+    box-sizing: content-box;
+  }
+  .sedans{
+    border-top-left-radius: 10px;
+    border-top-right-radius:10px;
+    border-bottom-left-radius: 0;
+  }
+  .luxury{
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0;
+  }
+}
+@media (max-width:90rem ){
+  
+}
